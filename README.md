@@ -50,3 +50,4 @@ Response Example:
 ## Contributor(s)
 
 - Chester Lee Coloma
+- ChatGPT helped with tests
