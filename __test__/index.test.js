@@ -1,10 +1,11 @@
-const { handler } = require('../index.js');
+const { handler } = require('../index.js'); 
 
 describe('handler function', () => {
-  test('should return a valid response with endGame property if requestBody options length is 4', () => {
+  test('should return a valid response with only deathOption if requestBody has a "roll" property', () => {
     const event = {
       body: JSON.stringify({
-        options: [1, 2, 3, 4], // Simulate a requestBody with options length 4
+        roll: true,
+        deathOption: 'Game Over', // Simulate a requestBody with a "roll" property
       }),
     };
 
@@ -12,14 +13,13 @@ describe('handler function', () => {
     const responseBody = JSON.parse(response.body);
 
     expect(response.statusCode).toBe(200);
-    expect(responseBody.options).toEqual([1, 2, 3, 4]);
-    expect(responseBody).toHaveProperty('endGame');
+    expect(responseBody).toEqual('Game Over');
   });
 
-  test('should return a valid response without endGame property if requestBody options length is not 4', () => {
+  test('should return a valid response with "endGame" property if "roll" is not in requestBody', () => {
     const event = {
       body: JSON.stringify({
-        options: [1, 2, 3], // Simulate a requestBody with options length not equal to 4
+        options: [1, 2, 3], // Simulate a requestBody without "roll" property
       }),
     };
 
@@ -28,7 +28,7 @@ describe('handler function', () => {
 
     expect(response.statusCode).toBe(200);
     expect(responseBody.options).toEqual([1, 2, 3]);
-    expect(responseBody).not.toHaveProperty('endGame');
+    expect(responseBody).toHaveProperty('roll');
   });
 
   test('should handle JSON parsing errors and return a 500 status code', () => {
