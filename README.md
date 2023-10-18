@@ -19,8 +19,10 @@ Request Example:
 	"class": STRING,
 	"age": NUMBER,
 }
-"options": [ optionA, optionB, optionC, optionD ]
-"endOptions": [ endA , endB, endC, endD ]
+"scene": NULL, // default
+"options": [ optionA, optionB, optionC, optionD ],
+"userChoice": NULL // default,
+"roll": FALSE // default,
 }
 ```
 
