@@ -6,6 +6,7 @@ exports.handler = (event) => {
     statusCode: 500,
     body: JSON.stringify('Something went wrong'),
   };
+  return response;
   try {
     let requestBody;
     if (typeof event === 'string') {
