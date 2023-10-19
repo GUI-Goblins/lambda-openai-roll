@@ -16,7 +16,7 @@ exports.handler = (event) => {
     if (requestBody.roll) {
       const response = {
         statusCode: 200,
-        body: JSON.stringify(requestBody.deathOption),
+        body: JSON.stringify(requestBody.deathScene),
       };
       console.log("HERE'S THE RESPONSE IF ROLL IS TRUE: ", response);
       return response;
