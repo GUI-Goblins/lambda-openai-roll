@@ -36,7 +36,8 @@ exports.handler = (event) => {
         // headers: {
         //   'Content-Type': 'application/json',
         // },
-        body: JSON.stringify(requestBody),
+        // body: JSON.stringify(requestBody),
+        body: JSON.stringify({ event: 3, payload: 'HELLO FROM CHARACTER ROLL!!' }),
       };
       console.log("HERE'S THE RESPONSE IF ROLL IS FALSE: ", response);
       return response;
