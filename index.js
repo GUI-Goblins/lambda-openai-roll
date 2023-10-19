@@ -14,6 +14,7 @@ exports.handler = (event) => {
         statusCode: 200,
         body: JSON.stringify(requestBody.deathOption),
       };
+      console.log("HERE'S THE RESPONSE IF ROLL IS TRUE: ", response);
       return response;
     } else {
       const endGame = Math.random() < 0.04; // 4% chance of true
@@ -22,7 +23,7 @@ exports.handler = (event) => {
         statusCode: 200,
         body: JSON.stringify(requestBody),
       };
-
+      console.log("HERE'S THE RESPONSE IF ROLL IS TRUE: ", response);
       return response;
     }
   } catch (error) {
