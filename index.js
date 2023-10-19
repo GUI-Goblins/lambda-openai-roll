@@ -21,9 +21,9 @@ exports.handler = (event) => {
     if (requestBody.roll) {
       const response = {
         statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
         body: JSON.stringify(requestBody.deathScene),
       };
       console.log("HERE'S THE RESPONSE IF ROLL IS TRUE: ", response);
@@ -33,9 +33,9 @@ exports.handler = (event) => {
       requestBody.roll = endGame;
       const response = {
         statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
         body: JSON.stringify(requestBody),
       };
       console.log("HERE'S THE RESPONSE IF ROLL IS FALSE: ", response);
@@ -45,9 +45,9 @@ exports.handler = (event) => {
     console.error('Error appending endGame property to requestBody', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      // headers: {
+      //   'Content-Type': 'application/json',
+      // },
       body: JSON.stringify({ message: 'Internal Server Error' }),
     };
   }
