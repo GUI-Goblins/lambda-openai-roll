@@ -6,6 +6,8 @@ exports.handler = (event) => {
     let requestBody;
     if (typeof event === 'string' ) {
       requestBody = JSON.parse(event);
+    } else {
+      requestBody = event;
     }
 
     if (!requestBody.hasOwnProperty('roll')) {
