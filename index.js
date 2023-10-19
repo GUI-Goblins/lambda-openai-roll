@@ -3,7 +3,9 @@
 exports.handler = (event) => {
   console.log('HERE IS THE EVENT OBJECT FROM OPEN_AI_REQUEST', event);
   try {
-    const requestBody = JSON.parse(event);
+    if (typeof event === 'string' ) {
+      const requestBody = JSON.parse(event);
+    }
 
     if (!requestBody.hasOwnProperty('roll')) {
       requestBody.roll = false; // Add the "roll" property with the initial value of false
