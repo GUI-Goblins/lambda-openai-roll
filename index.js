@@ -38,10 +38,7 @@ exports.handler = async (event) => {
       const endGame = Math.random() < 0.04; // 4% chance of true
       requestBody.roll = endGame;
       response.statusCode = 200;
-      response.body = JSON.stringify({
-        event: 3,
-        payload: 'HELLO FROM CHARACTER ROLL!!',
-      });
+      response.body = JSON.stringify(requestBody);
       // const response = {
       //   statusCode: 200,
       //   // headers: {
