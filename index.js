@@ -9,6 +9,10 @@ exports.handler = (event) => {
       requestBody.roll = false; // Add the "roll" property with the initial value of false
     }
 
+    if (!requestBody.hasOwnProperty('userChoice')) {
+      requestBody.userChoice = null; // Add the "userChoice" property with the initial value of null
+    }
+
     if (requestBody.roll) {
       const response = {
         statusCode: 200,
@@ -23,7 +27,7 @@ exports.handler = (event) => {
         statusCode: 200,
         body: JSON.stringify(requestBody),
       };
-      console.log("HERE'S THE RESPONSE IF ROLL IS TRUE: ", response);
+      console.log("HERE'S THE RESPONSE IF ROLL IS FALSE: ", response);
       return response;
     }
   } catch (error) {
