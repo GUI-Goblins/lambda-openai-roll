@@ -3,8 +3,8 @@
 exports.handler = (event) => {
   console.log('HERE IS THE EVENT OBJECT FROM OPEN_AI_REQUEST', event);
   const response = {
-    statusCode: 500,
-    body: JSON.stringify('Something went wrong'),
+    statusCode: 200,
+    body: JSON.stringify({ event: 3, payload: 'HELLO FROM LAMBDA 3!!' }),
   };
   return response;
   try {
