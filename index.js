@@ -25,7 +25,7 @@ exports.handler = (event) => {
       requestBody.roll = endGame;
       const response = {
         statusCode: 200,
-        // body: JSON.stringify(requestBody),
+        body: JSON.stringify(requestBody),
       };
       console.log("HERE'S THE RESPONSE IF ROLL IS FALSE: ", response);
       return response;
