@@ -1,6 +1,6 @@
 'use strict';
 
-exports.handler = (event) => {
+exports.handler = async (event) => {
   console.log('HERE IS THE EVENT OBJECT FROM OPEN_AI_REQUEST', event);
   const response = {
     statusCode: 200,
