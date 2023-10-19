@@ -1,5 +1,7 @@
+'use strict';
+
 exports.handler = (event) => {
-  console.log('HERE IS THE EVENT OBJECT ', event);
+  console.log('HERE IS THE EVENT OBJECT FROM OPEN_AI_REQUEST', event);
   try {
     const requestBody = JSON.parse(event.body);
 
