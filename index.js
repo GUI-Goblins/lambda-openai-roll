@@ -24,7 +24,7 @@ exports.handler = async (event) => {
 
     if (requestBody.roll) {
       response.statusCode = 200;
-      response.body = JSON.stringify(requestBody.deathScene);
+      response.body = JSON.stringify(requestBody);
       console.log("HERE'S THE RESPONSE IF ROLL IS TRUE: ", response);
     } else {
       const endGame = Math.random() < 0.30; // default 4% chance of true
