@@ -1,6 +1,6 @@
 # Lambda OpenAI Roll
 
-> This lambda function appends an endGame property to the event body if the OpenAI response has options lengths of 4. This endGame property has a value of either True or False. True has a chance of being 4% while False is 96%.
+> This lambda function appends an endGame property to the event body. This endGame property has a value of either True or False. True has a chance of being 4% while False is 96%.
 
 ## Installation
 
