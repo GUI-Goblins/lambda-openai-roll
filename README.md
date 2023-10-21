@@ -1,6 +1,6 @@
 # Lambda OpenAI Roll
 
-> This lambda function appends an endGame property to the event body. This endGame property has a value of either True or False. True has a chance of being 4% while False is 96%.
+> This lambda function appends an endGame property to the event body. This endGame property has a value of either True (end the character) or False (character can keep playing). True has a chance of being 10% while False is 90%.
 
 ## Installation
 
@@ -10,40 +10,12 @@
 
 > To test, use: `npm test`
 
-Request Example:
-```javascript
-{
-"user": {
-	"name": STRING,
-	"race": STRING,
-	"class": STRING,
-	"age": NUMBER,
-}
-"scene": NULL, // default
-"options": [ optionA, optionB, optionC, optionD ],
-"userChoice": NULL // default,
-"roll": FALSE // default,
-}
-```
-
-Response Example:
-```javascript
-{
-"user": {
-	"name": STRING,
-	"race": STRING,
-	"class": STRING,
-	"age": NUMBER,
-}
-"options": [ optionA, optionB, optionC, optionD ]
-"endOptions": [ endA , endB, endC, endD ]
-"endGame": False
-}
-```
+Play game utilizing live link below:
+![Live Link](https://questforge.netlify.app/)
 
 ## UML Diagram
 
-![UML Diagram](https://projects.invisionapp.com/freehand/document/Og97QVUVy)
+[UML Diagram](https://projects.invisionapp.com/freehand/document/Og97QVUVy)
 
 ## Repository link
 
@@ -52,4 +24,6 @@ Response Example:
 ## Contributor(s)
 
 - Chester Lee Coloma
+- Anthony Cunningham
+- Joshua Shea
 - ChatGPT helped with tests
